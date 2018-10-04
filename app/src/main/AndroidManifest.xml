@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tenutohahwi.hahwiportfolio">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 필 -->
+    <application
+        android:name=".util.Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".main.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".make.MakeAppActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".career.CareerActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".weather.WeatherActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".lotto.LottoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".foodanalysis.FoodAnalysisActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".foodanalysis.BarcodeListActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".qr.CaptureActivityAnyOrientation"
+            android:screenOrientation="fullSensor"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:name=".qr.ZxingACtivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="sensor"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".pay.PayActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

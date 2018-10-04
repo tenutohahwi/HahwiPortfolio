@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/altop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:id="@+id/llBack"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_top_back_w"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvToolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/slide_menu_5"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/llRight"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_qr_w"/>
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <View
+        android:id="@+id/vView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/altop"
+        android:background="@color/colorDivision"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/vView"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/slide_food"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="음.해(음식을 해석하다)"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/text_three"
+                android:textSize="15dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/food_barcode"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12dp"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/food_name"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/food_company"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/food_type"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/food_capacity"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/food_cal"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.wang.avi.AVLoadingIndicatorView
+                        android:id="@+id/loading"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:visibility="gone"
+                        android:layout_margin="50dp"
+                        android:layout_gravity="center"
+                        app:indicatorColor="@color/colorAccent"
+                        app:indicatorName="PacmanIndicator" />
+
+                    <ListView
+                        android:id="@+id/lvFood"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:choiceMode="singleChoice"
+                        android:divider="@color/colorDivision"
+                        android:dividerHeight="1dp"
+                        android:fastScrollEnabled="true"
+                        android:listSelector="@color/semi_transparent"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBarcodeInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/food_barcode"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvBarcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:text=""
+                            android:textColor="@color/text_three"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorDivision"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/food_name"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        >
+
+                        <EditText
+                            android:id="@+id/edtName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:inputType="text"
+                            android:background="@drawable/edittext_no_bottom_line"
+                            android:hint="상품명을 입력해주세요."
+                            android:paddingLeft="15dp"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorDivision"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/food_company"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edtCompany"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/edittext_no_bottom_line"
+                            android:hint="회사명을 입력해주세요."
+                            android:paddingLeft="15dp"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorDivision"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/food_type"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edtType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:inputType="text"
+                            android:background="@drawable/edittext_no_bottom_line"
+                            android:hint="구분을 입력해주세요."
+                            android:paddingLeft="15dp"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorDivision"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/food_capacity"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edtCapacity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:background="@drawable/edittext_no_bottom_line"
+                            android:hint="용량을 입력해주세요."
+                            android:paddingLeft="15dp"
+                            android:textSize="15dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginRight="15dp"
+                            android:text="ml"
+                            android:visibility="gone"
+                            android:textColor="@color/text_three"
+                            android:textSize="15dp"/>
+
+                        <Spinner
+                            android:id="@+id/spCapacity"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"></Spinner>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorDivision"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/food_cal"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/edtCal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:background="@drawable/edittext_no_bottom_line"
+                            android:hint="칼로리를 입력해주세요."
+                            android:paddingLeft="15dp"
+                            android:textSize="15dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginRight="15dp"
+                            android:text="kcal"
+                            android:textColor="@color/text_three"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorDivision"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:visibility="gone"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="버튼"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llInsert"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="등록"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llUpdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="수정"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+</RelativeLayout>

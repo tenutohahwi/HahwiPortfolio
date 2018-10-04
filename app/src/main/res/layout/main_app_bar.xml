@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tenutohahwi.hahwiportfolio.main.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:id="@+id/llSlideMenu"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_top_menu_w" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvToolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/test"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/llBarcode"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:layout_gravity="right"
+                android:orientation="vertical"
+                android:gravity="center">
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/main_content" />
+
+</android.support.design.widget.CoordinatorLayout>

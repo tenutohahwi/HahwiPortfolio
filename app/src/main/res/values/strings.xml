@@ -1,0 +1,50 @@
+<resources>
+    <string name="test">테스트를 해보자</string>
+    <string name="app_name">한민우TenutoHahwi</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="info_name">한민우 (88.10.19)</string>
+    <string name="info_email">shyknight_m@naver.com</string>
+    <string name="info_phone">010-9797-4719</string>
+
+    <string name="slide_menu_1">이력</string>
+    <string name="slide_menu_2">경력</string>
+    <string name="slide_menu_3">날씨</string>
+    <string name="slide_menu_4">로또</string>
+    <string name="slide_menu_5">음식을 해석하다</string>
+    <string name="slide_menu_6">월급</string>
+    <string name="slide_menu_setting">설정</string>
+
+    <string name="food_barcode">바코드</string>
+    <string name="food_name">상품명</string>
+    <string name="food_company">회사명</string>
+    <string name="food_type">구분</string>
+    <string name="food_capacity">용량</string>
+    <string name="food_cal">칼로리</string>
+
+    <string name="company_kabeon">(주)카배온</string>
+    <string name="company_ncodi">(주)엔코디</string>
+    <string name="company_sevenedu">세븐에듀(주)</string>
+
+    <string name="ncodi_sotesan">소태산마음학교</string>
+    <string name="ncodi_mindstudy">수상한마음공부</string>
+    <string name="ncodi_woncircle">원불교교도수첩</string>
+    <string name="ncodi_christianmall">기독교복지몰</string>
+    <string name="ncodi_wems">WEMS</string>
+
+    <string name="sevenedu_sevenedu">세븐에듀</string>
+    <string name="sevenedu_mathbank">절대유형N제</string>
+    <string name="sevenedu_mathdna">수학DNA</string>
+    <string name="sevenedu_mathmaticalformula">외워지는수학공식</string>
+    <string name="sevenedu_chamathnotice">차톡</string>
+    <string name="sevenedu_schamath">스마트차수학</string>
+
+    <string name="sevenedu_chamathnotice_detail">WebView, FCM, Chatting(Socket.io), Barcode, QRcode Reader(Zxing)</string>
+    <string name="sevenedu_sevenedu_detail">Player, WebView, FCM, Barcode, QRcode Reader(Zxing), SugarORM</string>
+    <string name="sevenedu_mathbank_detail">Native, FCM, 문제풀이, 손글씨, Blur, SugarORM</string>
+    <string name="sevenedu_mathmaticalformula_detail">Native, FCM, 수학공식, SugarORM</string>
+
+    <string name="app_type_native">Native</string>
+    <string name="app_type_hybrid">Hybrid</string>
+
+</resources>

@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                                             tools:context="com.tenutohahwi.hahwiportfolio.main.MainActivity"
+                                             tools:showIn="@layout/main_app_bar">
+
+    <LinearLayout
+        android:id="@+id/llEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="항목이 없습니다."
+            android:textColor="@color/colorPrimary"
+            android:textSize="25dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:id="@+id/llBody"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <!-- 이력 / 경력 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <!-- 이력 -->
+                <LinearLayout
+                    android:id="@+id/llCareer"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_eeeline"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_horizontal|bottom">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/slide_info"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|top">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="이력"
+                            android:textColor="@color/text_three"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- 이력 -->
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+
+                <!-- 경력 -->
+                <LinearLayout
+                    android:id="@+id/llMakeApp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_eeeline"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_horizontal|bottom">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/slide_career"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|top">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="경력"
+                            android:textColor="@color/text_three"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 경력 -->
+
+            </LinearLayout>
+            <!-- 이력 / 경력 -->
+
+            <!-- 음해 / 날씨 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <!-- 음해 -->
+                <LinearLayout
+                    android:id="@+id/llFoodAnalysis"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_eeeline"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_horizontal|bottom">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/slide_food"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|top">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="음.해(음식을 해석하다)"
+                            android:textColor="@color/text_three"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 음해 -->
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+
+                <!-- 날씨 -->
+                <LinearLayout
+                    android:id="@+id/llWeather"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_eeeline"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_horizontal|bottom">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/slide_weather"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|top">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="날씨"
+                            android:textColor="@color/text_three"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 날씨 -->
+
+            </LinearLayout>
+            <!-- 음해 / 날씨 -->
+
+            <!-- 로또 / ?? -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <!-- 로또 -->
+                <LinearLayout
+                    android:id="@+id/llLotto"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_eeeline"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_horizontal|bottom">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/slide_card"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|top">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="로또"
+                            android:textColor="@color/text_three"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 로또 -->
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+                <!-- ?? -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_eeeline"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_horizontal|bottom">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/icon_idea"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|top">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="아이디어 고민중"
+                            android:textColor="@color/text_three"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- ?? -->
+
+
+            </LinearLayout>
+            <!-- 로또 / ?? -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/hmw"/>
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+
+                    android:src="@drawable/hmw_1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivWeather"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@mipmap/ic_launcher"/>
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_phone"
+                        android:textColor="@color/text_three"
+                        android:textSize="15dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_phone"
+                        android:textColor="@color/text_three"
+                        android:textSize="15dp"/>
+
+                    <TextView
+                        android:id="@+id/tvHumidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_phone"
+                        android:textColor="@color/text_three"
+                        android:textSize="15dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_phone"
+                        android:textColor="@color/text_three"
+                        android:textSize="15dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="테스트"
+                    android:textColor="@color/text_three"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아이디어목록"
+                    android:textColor="@color/text_three"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="날씨, 로또, D-Day, 택배 배송조회, 멤버십포인트적립(시럽)"
+                    android:textColor="@color/text_three"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아이디 패스워드 기록 어플(생체인식), 바코드 찍어서 음식 칼로리, 지방 알려주는어플"
+                    android:textColor="@color/text_three"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="직접발로뛰는리얼맛평가(직발리맛평)"
+                    android:textColor="@color/text_three"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

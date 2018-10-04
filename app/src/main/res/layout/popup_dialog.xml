@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#73000000">
+
+    <LinearLayout
+        android:id="@+id/llDownload"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_popup_round"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_popup_header_round"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="해설보기"
+                    android:textColor="@color/text_three"
+                    android:textSize="13dp" />
+
+                <ImageButton
+                    android:id="@+id/ibClose"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_top_back_w" />
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/popup_view" />
+
+        <LinearLayout
+            android:id="@+id/llTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llTitle"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="@drawable/popup_title_view"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="해설을 보면 오답으로 처리됩니다."
+                    android:textColor="@color/colorWhite"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/tvSubTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="해설을 보시겠습니까?"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llYes"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/popup_bottom_view"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvYes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="예"
+                    android:textColor="@color/text_three"
+                    android:textSize="13dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMidButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/popup_bottom_view"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvMidButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="예"
+                    android:textColor="@color/text_three"
+                    android:textSize="13dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llNo"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_popup_bottom_round"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="아니오"
+                    android:textColor="@color/text_three"
+                    android:textSize="13dp" />
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

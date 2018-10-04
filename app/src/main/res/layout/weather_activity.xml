@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/altop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:id="@+id/llBack"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_top_back_w" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvToolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/slide_menu_3"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/llRight"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:orientation="vertical"></LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <View
+        android:id="@+id/vView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/altop"
+        android:background="@color/colorDivision" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/vView"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/slide_weather"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="날씨"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/text_three"
+                android:textSize="15dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spCity"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/button_eeeline"
+                    android:gravity="center"></Spinner>
+
+                <LinearLayout
+                    android:id="@+id/llLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="위치정보 가져오기"
+                        android:textColor="@color/text_three"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivWeather"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_phone"
+                        android:textColor="@color/text_three"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_phone"
+                        android:textColor="@color/text_three"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/tvHumidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_phone"
+                        android:textColor="@color/text_three"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/tvCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_phone"
+                        android:textColor="@color/text_three"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llThreeHourWeather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="시간별 날씨"
+                    android:textColor="@color/text_three"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDate1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="09:00"
+                            style="@style/weatherThreeText"/>
+
+                        <ImageView
+                            android:id="@+id/ivWeather1"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/tvDescription1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_phone"
+                            style="@style/weatherThreeText"/>
+
+                        <TextView
+                            android:id="@+id/tvTemp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_phone"
+                            style="@style/weatherThreeText"/>
+
+                        <TextView
+                            android:id="@+id/tvHumidity1"
+                            style="@style/weatherThreeText"
+                            android:layout_width="wrap_content"
+                            android:text="@string/info_phone"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDate2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="09:00"
+                            style="@style/weatherThreeText"/>
+
+                        <ImageView
+                            android:id="@+id/ivWeather2"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/tvDescription2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_phone"
+                            style="@style/weatherThreeText"/>
+
+                        <TextView
+                            android:id="@+id/tvTemp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_phone"
+                            style="@style/weatherThreeText"/>
+
+                        <TextView
+                            android:id="@+id/tvHumidity2"
+                            style="@style/weatherThreeText"
+                            android:layout_width="wrap_content"
+                            android:text="@string/info_phone"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDate3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="09:00"
+                            style="@style/weatherThreeText"/>
+
+                        <ImageView
+                            android:id="@+id/ivWeather3"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/tvDescription3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_phone"
+                            style="@style/weatherThreeText"/>
+
+                        <TextView
+                            android:id="@+id/tvTemp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_phone"
+                            style="@style/weatherThreeText"/>
+
+                        <TextView
+                            android:id="@+id/tvHumidity3"
+                            style="@style/weatherThreeText"
+                            android:layout_width="wrap_content"
+                            android:text="@string/info_phone"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDate4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="09:00"
+                            style="@style/weatherThreeText"/>
+
+                        <ImageView
+                            android:id="@+id/ivWeather4"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/tvDescription4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_phone"
+                            style="@style/weatherThreeText"/>
+
+                        <TextView
+                            android:id="@+id/tvTemp4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_phone"
+                            style="@style/weatherThreeText"/>
+
+                        <TextView
+                            android:id="@+id/tvHumidity4"
+                            style="@style/weatherThreeText"
+                            android:layout_width="wrap_content"
+                            android:text="@string/info_phone"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDate5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="09:00"
+                            style="@style/weatherThreeText"/>
+
+                        <ImageView
+                            android:id="@+id/ivWeather5"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/tvDescription5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_phone"
+                            style="@style/weatherThreeText"/>
+
+                        <TextView
+                            android:id="@+id/tvTemp5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_phone"
+                            style="@style/weatherThreeText"/>
+
+                        <TextView
+                            android:id="@+id/tvHumidity5"
+                            style="@style/weatherThreeText"
+                            android:layout_width="wrap_content"
+                            android:text="@string/info_phone"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDate6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="09:00"
+                            style="@style/weatherThreeText"/>
+
+                        <ImageView
+                            android:id="@+id/ivWeather6"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/tvDescription6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_phone"
+                            style="@style/weatherThreeText"/>
+
+                        <TextView
+                            android:id="@+id/tvTemp6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_phone"
+                            style="@style/weatherThreeText"/>
+
+                        <TextView
+                            android:id="@+id/tvHumidity6"
+                            style="@style/weatherThreeText"
+                            android:layout_width="wrap_content"
+                            android:text="@string/info_phone"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDate7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="09:00"
+                            style="@style/weatherThreeText"/>
+
+                        <ImageView
+                            android:id="@+id/ivWeather7"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/tvDescription7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_phone"
+                            style="@style/weatherThreeText"/>
+
+                        <TextView
+                            android:id="@+id/tvTemp7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/info_phone"
+                            style="@style/weatherThreeText"/>
+
+                        <TextView
+                            android:id="@+id/tvHumidity7"
+                            style="@style/weatherThreeText"
+                            android:layout_width="wrap_content"
+                            android:text="@string/info_phone"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

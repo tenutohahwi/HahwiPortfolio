@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "499807073499",
+    "firebase_url": "https://foodanalysis-18596.firebaseio.com",
+    "project_id": "foodanalysis-18596",
+    "storage_bucket": "foodanalysis-18596.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499807073499:android:d25bf1c37814d82f",
+        "android_client_info": {
+          "package_name": "com.tenutohahwi.hahwiportfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499807073499-jcipc3l45ci5smd5c9qo0tjr0ns6k31u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxFWho-ICdb6EXIl1J6ypWozfTKrTNaWk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

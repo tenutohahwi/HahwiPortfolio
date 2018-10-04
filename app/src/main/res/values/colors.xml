@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorDivision">#E6E6E6</color>
+    <color name="semi_transparent">#00000000</color>
+
+    <color name="text_three">#333333</color>
+    <color name="text_six">#666666</color>
+    <color name="text_nine">#999999</color>
+
+    <color name="popup_header_bg">#F8F8FA</color>
+    <color name="popup_view">#eaeaea</color>
+
+    <color name="color_ccc">#cccccc</color>
+    <color name="color_eee">#eeeeee</color>
+
+    <color name="color_red">#E54545</color>
+
+    <!-- calendarView -->
+    <color name="greyed_out">#c7c7c7</color>
+
+    <color name="bg_calendar_toady">#EAECED</color>
+</resources>
