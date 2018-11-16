@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -23,12 +24,16 @@ import com.tenutohahwi.hahwiportfolio.foodanalysis.FoodAnalysisActivity;
 import com.tenutohahwi.hahwiportfolio.http.APIClient;
 import com.tenutohahwi.hahwiportfolio.http.APIInterface;
 import com.tenutohahwi.hahwiportfolio.http.HttpService;
+import com.tenutohahwi.hahwiportfolio.idea.IdeaActivity;
 import com.tenutohahwi.hahwiportfolio.lotto.LottoActivity;
 import com.tenutohahwi.hahwiportfolio.make.MakeAppActivity;
 import com.tenutohahwi.hahwiportfolio.model.MultipleResource;
 import com.tenutohahwi.hahwiportfolio.model.User;
 import com.tenutohahwi.hahwiportfolio.model.UserList;
+import com.tenutohahwi.hahwiportfolio.ocr.OcrActivity;
 import com.tenutohahwi.hahwiportfolio.pay.PayActivity;
+import com.tenutohahwi.hahwiportfolio.player.PlayerActivity;
+import com.tenutohahwi.hahwiportfolio.vlc.VlcActivity;
 import com.tenutohahwi.hahwiportfolio.weather.WeatherActivity;
 
 import org.json.JSONArray;
@@ -45,8 +50,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity
-{
+public class MainActivity extends AppCompatActivity {
     private Activity    activity;
     private Application app;
     private Context     context;
@@ -66,25 +70,24 @@ public class MainActivity extends AppCompatActivity
     @BindView(R.id.llFoodAnalysis) LinearLayout llFoodAnalysis;
     @BindView(R.id.llWeather)      LinearLayout llWeather;
     @BindView(R.id.llLotto)        LinearLayout llLotto;
+    @BindView(R.id.llIdea)         LinearLayout llIdea;
+    @BindView(R.id.llExoPlayer)    LinearLayout llExoPlayer;
+    @BindView(R.id.llGallery)      LinearLayout llGallery;
+    @BindView(R.id.llOcr)          LinearLayout llOcr;
+    @BindView(R.id.llVLC)          LinearLayout llVLC;
 
-    @BindView(R.id.ivWeather) ImageView ivWeather;
-
-    @BindView(R.id.tvDescription) TextView tvDescription;
-
-    @BindView(R.id.tvTemp) TextView tvTemp;
-
-    @BindView(R.id.tvHumidity) TextView tvHumidity;
-
-    @BindView(R.id.tvCity) TextView tvCity;
-
-    @BindView(R.id.tvTest) TextView tvTest;
+    @BindView(R.id.ivWeather)     ImageView ivWeather;
+    @BindView(R.id.tvDescription) TextView  tvDescription;
+    @BindView(R.id.tvTemp)        TextView  tvTemp;
+    @BindView(R.id.tvHumidity)    TextView  tvHumidity;
+    @BindView(R.id.tvCity)        TextView  tvCity;
+    @BindView(R.id.tvTest)        TextView  tvTest;
 
     APIInterface apiInterface;
 
 
     @Override
-    protected void onCreate( Bundle savedInstanceState )
-    {
+    protected void onCreate( Bundle savedInstanceState ) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
@@ -99,68 +102,65 @@ public class MainActivity extends AppCompatActivity
 
         setSlideListView();
 
-        httpService.getWeatherDataCity(new HttpService.HttpCallback()
-        {
-            @Override
-            public void httpDone( String result )
-            {
-                if ("Fail".equals(result) || "Exception".equals(result))
-                {
-
-                }
-                else
-                {
-                    try
-                    {
-                        JSONObject jsonRoot         = new JSONObject(result);
-                        JSONArray  jsonArrayWeather = new JSONArray(jsonRoot.getString("weather"));
-                        for (int i = 0; i < jsonArrayWeather.length(); i++)
-                        {
-                            JSONObject jObject = jsonArrayWeather.getJSONObject(i);  // JSONObject 추출
-
-                            String weatherIconUrl = "http://openweathermap.org/img/w/" + jObject.getString("icon") + ".png";
-                            Glide.with(activity).load(weatherIconUrl).into(ivWeather);
-
-                            tvDescription.setText(jObject.getString("main") + "(" + jObject.getString("description") + ")");
-                        }
-
-                        JSONObject jsonObjectMain = new JSONObject(jsonRoot.getString("main"));
-                        String     temp           = (jsonObjectMain.getDouble("temp") - 273) + "";
-                        temp = temp.substring(0, 4);
-                        tvTemp.setText("온도 : " + temp + "℃");
-
-                        tvHumidity.setText("습도 : " + jsonObjectMain.getDouble("humidity") + "%");
-
-                        JSONObject jsonObjectSys = new JSONObject(jsonRoot.getString("sys"));
-                        String     country       = jsonObjectSys.getString("country");
-
-                        tvCity.setText(jsonRoot.getString("name") + " " + country);
-
-                    }
-                    catch (Exception e)
-                    {
-                        e.printStackTrace();
-                    }
-
-                }
-            }
-        });
+        //        httpService.getWeatherDataCity(new HttpService.HttpCallback()
+        //        {
+        //            @Override
+        //            public void httpDone( String result )
+        //            {
+        //                if ("Fail".equals(result) || "Exception".equals(result))
+        //                {
+        //
+        //                }
+        //                else
+        //                {
+        //                    try
+        //                    {
+        //                        JSONObject jsonRoot         = new JSONObject(result);
+        //                        JSONArray  jsonArrayWeather = new JSONArray(jsonRoot.getString("weather"));
+        //                        for (int i = 0; i < jsonArrayWeather.length(); i++)
+        //                        {
+        //                            JSONObject jObject = jsonArrayWeather.getJSONObject(i);  // JSONObject 추출
+        //
+        //                            String weatherIconUrl = "http://openweathermap.org/img/w/" + jObject.getString("icon") + ".png";
+        //                            Glide.with(activity).load(weatherIconUrl).into(ivWeather);
+        //
+        //                            tvDescription.setText(jObject.getString("main") + "(" + jObject.getString("description") + ")");
+        //                        }
+        //
+        //                        JSONObject jsonObjectMain = new JSONObject(jsonRoot.getString("main"));
+        //                        String     temp           = (jsonObjectMain.getDouble("temp") - 273) + "";
+        //                        temp = temp.substring(0, 4);
+        //                        tvTemp.setText("온도 : " + temp + "℃");
+        //
+        //                        tvHumidity.setText("습도 : " + jsonObjectMain.getDouble("humidity") + "%");
+        //
+        //                        JSONObject jsonObjectSys = new JSONObject(jsonRoot.getString("sys"));
+        //                        String     country       = jsonObjectSys.getString("country");
+        //
+        //                        tvCity.setText(jsonRoot.getString("name") + " " + country);
+        //
+        //                    }
+        //                    catch (Exception e)
+        //                    {
+        //                        e.printStackTrace();
+        //                    }
+        //
+        //                }
+        //            }
+        //        });
 
 
         //testCode();
     }
 
-    private void testCode()
-    {
+    private void testCode() {
         /**
          GET List Resources
          **/
         Call<MultipleResource> call = apiInterface.doGetListResources();
-        call.enqueue(new Callback<MultipleResource>()
-        {
+        call.enqueue(new Callback<MultipleResource>() {
             @Override
-            public void onResponse( Call<MultipleResource> call, Response<MultipleResource> response )
-            {
+            public void onResponse( Call<MultipleResource> call, Response<MultipleResource> response ) {
 
 
                 Log.d("TAG", response.code() + "");
@@ -175,8 +175,7 @@ public class MainActivity extends AppCompatActivity
 
                 displayResponse += text + " Page\n" + total + " Total\n" + totalPages + " Total Pages\n";
 
-                for (MultipleResource.Datum datum : datumList)
-                {
+                for (MultipleResource.Datum datum : datumList) {
                     displayResponse += datum.id + " " + datum.name + " " + datum.pantoneValue + " " + datum.year + "\n";
                 }
 
@@ -185,8 +184,7 @@ public class MainActivity extends AppCompatActivity
             }
 
             @Override
-            public void onFailure( Call<MultipleResource> call, Throwable t )
-            {
+            public void onFailure( Call<MultipleResource> call, Throwable t ) {
                 call.cancel();
             }
         });
@@ -196,11 +194,9 @@ public class MainActivity extends AppCompatActivity
          **/
         User       user  = new User("morpheus", "leader");
         Call<User> call1 = apiInterface.createUser(user);
-        call1.enqueue(new Callback<User>()
-        {
+        call1.enqueue(new Callback<User>() {
             @Override
-            public void onResponse( Call<User> call, Response<User> response )
-            {
+            public void onResponse( Call<User> call, Response<User> response ) {
                 User user1 = response.body();
 
                 Toast.makeText(getApplicationContext(), user1.name + " " + user1.job + " " + user1.id + " " + user1.createdAt, Toast.LENGTH_SHORT).show();
@@ -208,8 +204,7 @@ public class MainActivity extends AppCompatActivity
             }
 
             @Override
-            public void onFailure( Call<User> call, Throwable t )
-            {
+            public void onFailure( Call<User> call, Throwable t ) {
                 call.cancel();
             }
         });
@@ -218,11 +213,9 @@ public class MainActivity extends AppCompatActivity
          GET List Users
          **/
         Call<UserList> call2 = apiInterface.doGetUserList("2");
-        call2.enqueue(new Callback<UserList>()
-        {
+        call2.enqueue(new Callback<UserList>() {
             @Override
-            public void onResponse( Call<UserList> call, Response<UserList> response )
-            {
+            public void onResponse( Call<UserList> call, Response<UserList> response ) {
 
                 UserList             userList   = response.body();
                 Integer              text       = userList.page;
@@ -231,8 +224,7 @@ public class MainActivity extends AppCompatActivity
                 List<UserList.Datum> datumList  = userList.data;
                 Toast.makeText(getApplicationContext(), text + " page\n" + total + " total\n" + totalPages + " totalPages\n", Toast.LENGTH_SHORT).show();
 
-                for (UserList.Datum datum : datumList)
-                {
+                for (UserList.Datum datum : datumList) {
                     Toast.makeText(getApplicationContext(), "id : " + datum.id + " name: " + datum.first_name + " " + datum.last_name + " avatar: " + datum.avatar, Toast.LENGTH_SHORT).show();
                 }
 
@@ -240,8 +232,7 @@ public class MainActivity extends AppCompatActivity
             }
 
             @Override
-            public void onFailure( Call<UserList> call, Throwable t )
-            {
+            public void onFailure( Call<UserList> call, Throwable t ) {
                 call.cancel();
             }
         });
@@ -251,11 +242,9 @@ public class MainActivity extends AppCompatActivity
          POST name and job Url encoded.
          **/
         Call<UserList> call3 = apiInterface.doCreateUserWithField("morpheus", "leader");
-        call3.enqueue(new Callback<UserList>()
-        {
+        call3.enqueue(new Callback<UserList>() {
             @Override
-            public void onResponse( Call<UserList> call, Response<UserList> response )
-            {
+            public void onResponse( Call<UserList> call, Response<UserList> response ) {
                 UserList             userList   = response.body();
                 Integer              text       = userList.page;
                 Integer              total      = userList.total;
@@ -263,26 +252,22 @@ public class MainActivity extends AppCompatActivity
                 List<UserList.Datum> datumList  = userList.data;
                 Toast.makeText(getApplicationContext(), text + " page\n" + total + " total\n" + totalPages + " totalPages\n", Toast.LENGTH_SHORT).show();
 
-                for (UserList.Datum datum : datumList)
-                {
+                for (UserList.Datum datum : datumList) {
                     Toast.makeText(getApplicationContext(), "id : " + datum.id + " name: " + datum.first_name + " " + datum.last_name + " avatar: " + datum.avatar, Toast.LENGTH_SHORT).show();
                 }
 
             }
 
             @Override
-            public void onFailure( Call<UserList> call, Throwable t )
-            {
+            public void onFailure( Call<UserList> call, Throwable t ) {
                 call.cancel();
             }
         });
 
     }
 
-    private void setSlideListView()
-    {
-        if (null == mainSlideAdapter)
-        {
+    private void setSlideListView() {
+        if (null == mainSlideAdapter) {
             mainSlideAdapter = new MainSlideAdapter(context, R.layout.main_slide_item);
         }
         mainSlideAdapter.setData(new MainSlide(getApplicationContext()).setSlideData());
@@ -290,17 +275,14 @@ public class MainActivity extends AppCompatActivity
     }
 
     @OnClick(R.id.llSlideMenu)
-    void onSlideMenuClick()
-    {
+    void onSlideMenuClick() {
         drawerLayout.openDrawer(GravityCompat.START);
     }
 
     @OnItemClick(R.id.lvSlideMenu)
-    void onItemClick( int position )
-    {
+    void onItemClick( int position ) {
         Intent intent = new Intent();
-        switch (position)
-        {
+        switch (position) {
             case 0:
                 intent.setClass(context, CareerActivity.class);
                 break;
@@ -329,42 +311,72 @@ public class MainActivity extends AppCompatActivity
 
 
     @OnClick(R.id.llCareer)
-    void onCareerClick()
-    {
+    void onCareerClick() {
         Intent intent = new Intent();
         intent.setClass(context, CareerActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.llMakeApp)
-    void onMakeAppClick()
-    {
+    void onMakeAppClick() {
         Intent intent = new Intent();
         intent.setClass(context, MakeAppActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.llFoodAnalysis)
-    void onFoodAnalysisClick()
-    {
+    void onFoodAnalysisClick() {
         Intent intent = new Intent();
         intent.setClass(context, FoodAnalysisActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.llWeather)
-    void onWeatherClick()
-    {
+    void onWeatherClick() {
         Intent intent = new Intent();
         intent.setClass(context, WeatherActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.llLotto)
-    void onLottoClick()
-    {
+    void onLottoClick() {
         Intent intent = new Intent();
         intent.setClass(context, LottoActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.llIdea)
+    void onIdeaClick() {
+        Intent intent = new Intent();
+        intent.setClass(context, IdeaActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.llGallery)
+    void onGalleryClick() {
+        Intent intent = new Intent();
+        intent.setClass(context, IdeaActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.llExoPlayer)
+    void onExoplayerClick() {
+        Intent intent = new Intent();
+        intent.setClass(context, PlayerActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.llOcr)
+    void onOcrClick() {
+        Intent intent = new Intent();
+        intent.setClass(context, OcrActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.llVLC)
+    void onVlcClick() {
+        Intent intent = new Intent();
+        intent.setClass(context, VlcActivity.class);
         startActivity(intent);
     }
 }

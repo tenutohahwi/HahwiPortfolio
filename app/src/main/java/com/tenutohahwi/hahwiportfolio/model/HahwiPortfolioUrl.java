@@ -20,6 +20,7 @@ public class HahwiPortfolioUrl {
     public static final String OPEN_WEATHER_MAP ="http://api.openweathermap.org/data/2.5/weather";
     public static final String WEATHER_SEOUL = "http://api.openweathermap.org/data/2.5/weather?q=seoul&APPID=55c62d0def9e9c75559ba60520f92deb";
     public static final String OPEN_WEATHER_MAP_FORECAST = "http://api.openweathermap.org/data/2.5/forecast?appid=55c62d0def9e9c75559ba60520f92deb";
+    public static final String OPEN_WEATHER_MAP_THREE_HOUR = "http://api.openweathermap.org/data/2.5/forecast";
 
     public static final String LOTTO_WIN_NUMBER = "http://www.nlotto.co.kr/common.do";
 

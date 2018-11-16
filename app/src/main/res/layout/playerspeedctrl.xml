@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true">
+
+        <FrameLayout
+            android:id="@+id/emptyFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+
+            <TextView
+                android:id="@+id/tx_play_speed"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="1.0x"
+                android:textSize="18sp"
+                android:textColor="@color/colorWhite"/>
+        </FrameLayout>
+
+
+        <Button
+            android:id="@+id/btn_play_speed_up"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/emptyFrame"
+            android:background="@drawable/icon_movie_10" />
+
+        <Button
+            android:id="@+id/btn_play_speed_down"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/emptyFrame"
+            android:background="@drawable/icon_movie_09" />
+
+    </RelativeLayout>
+</LinearLayout>

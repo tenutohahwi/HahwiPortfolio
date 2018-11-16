@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Kotlin">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/altop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:id="@+id/llBack"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_top_back_w"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvToolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/slide_menu_7"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/llRight"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_qr_w"/>
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <View
+        android:id="@+id/vView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/altop"
+        app:layout_constraintTop_toBottomOf="@id/altop"
+        android:background="@color/colorDivision"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/vView"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/slide_video"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:text="@string/slide_menu_8"
+            android:textColor="@color/text_three"
+            android:textSize="15dp"/>
+
+        <FrameLayout
+            android:id="@+id/flPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:id="@+id/mpSpeedCtrl"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/movie_round"
+                android:clickable="false"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <include layout="@layout/playerspeedctrl"/>
+            </RelativeLayout>
+
+            <SurfaceView
+                android:id="@+id/surface"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:id="@+id/llPlayerPlayControl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#80000000"
+                android:clickable="false"
+                android:gravity="center"
+                android:padding="20dp">
+
+                <Button
+                    android:id="@+id/btnRetour"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/icon_movie_06"/>
+
+                <Button
+                    android:id="@+id/btnPlaynPause"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/icon_movie_08_1"/>
+
+
+                <Button
+                    android:id="@+id/btnAdvance"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="20dip"
+                    android:background="@drawable/icon_movie_07"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSeek"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <SeekBar
+                        android:id="@+id/vlcSeekbar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/vlcDuration"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="00:00 / 00:00"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@android:color/white"/>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

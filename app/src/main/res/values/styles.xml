@@ -13,9 +13,9 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
     <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
         <item name="windowNoTitle">true</item>
@@ -28,5 +28,11 @@
         <item name="android:textColor">@color/text_three</item>
         <item name="android:textSize">11dp</item>
     </style>
+
+    <style name="PlayerTheme" parent="android:Theme.Holo">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
 
 </resources>

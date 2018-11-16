@@ -13,6 +13,8 @@
     <string name="slide_menu_4">로또</string>
     <string name="slide_menu_5">음식을 해석하다</string>
     <string name="slide_menu_6">월급</string>
+    <string name="slide_menu_7">OCR</string>
+    <string name="slide_menu_8">VLC Player</string>
     <string name="slide_menu_setting">설정</string>
 
     <string name="food_barcode">바코드</string>
@@ -46,5 +48,40 @@
 
     <string name="app_type_native">Native</string>
     <string name="app_type_hybrid">Hybrid</string>
+
+    <string name="error_generic">Playback failed</string>
+
+    <string name="error_unrecognized_abr_algorithm">Unrecognized ABR algorithm</string>
+
+    <string name="error_drm_not_supported">Protected content not supported on API levels below 18</string>
+
+    <string name="error_drm_unsupported_scheme">This device does not support the required DRM scheme</string>
+
+    <string name="error_drm_unknown">An unknown DRM error occurred</string>
+
+    <string name="error_querying_decoders">Unable to query device decoders</string>
+
+    <string name="error_unsupported_video">Media includes video tracks, but none are playable by this device</string>
+
+    <string name="error_unsupported_audio">Media includes audio tracks, but none are playable by this device</string>
+
+    <string name="storage_permission_denied">Permission to access storage was denied</string>
+
+    <string name="sample_list_load_error">One or more sample lists failed to load</string>
+
+    <string name="ima_not_loaded">Playing sample without ads, as the IMA extension was not loaded</string>
+
+    <string name="download_start_error">Failed to start download</string>
+
+    <string name="download_playlist_unsupported">This demo app does not support downloading playlists</string>
+
+    <string name="download_drm_unsupported">This demo app does not support downloading protected content</string>
+
+    <string name="download_scheme_unsupported">This demo app only supports downloading http streams</string>
+
+    <string name="download_ads_unsupported">IMA does not support offline ads</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_test_kt">TestKtActivity</string>
 
 </resources>

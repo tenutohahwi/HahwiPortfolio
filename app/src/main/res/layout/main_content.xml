@@ -281,6 +281,199 @@
                     android:layout_height="match_parent"/>
                 <!-- ?? -->
                 <LinearLayout
+                    android:id="@+id/llGallery"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_eeeline"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_horizontal|bottom">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/slide_picture"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|top">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="카메라, 갤러리"
+                            android:textColor="@color/text_three"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- ?? -->
+
+
+            </LinearLayout>
+            <!-- 로또 / ?? -->
+
+            <!-- ExoPlayer / OCR -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <!-- ExoPlayer -->
+                <LinearLayout
+                    android:id="@+id/llExoPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_eeeline"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_horizontal|bottom">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/slide_video"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|top">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ExoPlayer"
+                            android:textColor="@color/text_three"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- ExoPlayer -->
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+                <!-- OCR -->
+                <LinearLayout
+                    android:id="@+id/llOcr"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_eeeline"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_horizontal|bottom">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/icon_idea"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|top">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="OCR"
+                            android:textColor="@color/text_three"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- OCR -->
+
+
+            </LinearLayout>
+            <!-- ExoPlayer / OCR -->
+
+            <!-- VLC / 아이디어 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <!-- VLC -->
+                <LinearLayout
+                    android:id="@+id/llVLC"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_eeeline"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_horizontal|bottom">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/slide_video"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|top">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/slide_menu_8"
+                            android:textColor="@color/text_three"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--  VLC  -->
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"/>
+                <!--아이디어-->
+                <LinearLayout
+                    android:id="@+id/llIdea"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -317,11 +510,11 @@
                             android:textSize="15dp"/>
                     </LinearLayout>
                 </LinearLayout>
-                <!-- ?? -->
+                <!--아이디어-->
 
 
             </LinearLayout>
-            <!-- 로또 / ?? -->
+            <!-- ExoPlayer / ?? -->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -345,8 +538,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:visibility="gone"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -409,8 +602,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:visibility="gone"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/tvTest"
@@ -426,8 +619,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:visibility="gone"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="wrap_content"

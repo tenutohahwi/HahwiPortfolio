@@ -119,6 +119,11 @@ public class PreferenceInfo {
 
 	public static final String SYNC_ALWAYS_YES = "sync_always_yes";
 
+	public static final String DEVICE_WIDTH = "device_width";
+	public static final String DEVICE_HEIGHT = "device_height";
+
+	public static final String MOVIE_WIDTH = "movie_width";
+	public static final String MOVIE_HEIGHT = "movie_height";
 }
 
 
